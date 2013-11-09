@@ -51,8 +51,8 @@ class WhatsappListenerClient:
 		self.username = username
 		self.methodsInterface.call("auth_login", (username, password))
 		
-		
-		while True:
+		inp = ''
+		while inp != 'q':
 			raw_input()	
 
 	def onAuthSuccess(self, username):
