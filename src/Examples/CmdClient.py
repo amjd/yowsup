@@ -108,7 +108,8 @@ class WhatsappCmdClient:
 		print("Starting Interactive chat with %s" % jid)
 		jid = "%s@s.whatsapp.net" % jid
 		print(self.getPrompt())
-		while True:
+		inp = ''
+		while inp not in ['/q','/Q']:
 			message = raw_input()
 			message = message.strip()
 			if not len(message):
